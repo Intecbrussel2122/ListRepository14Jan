@@ -89,8 +89,14 @@ namespace ListRepository
                 Console.WriteLine(item);
             }
 
+            Console.WriteLine();
+            Console.WriteLine();
 
-
+            var dtoType = cm.GetPartOfProductDTO();
+            foreach (var item in dtoType)
+            {
+                Console.WriteLine(item);
+            }
 
 
 
