@@ -103,7 +103,7 @@ namespace ListRepository
 
             Console.WriteLine();
             Console.WriteLine();
-            cm.ShowTelephones();
+            cm.ShowComputers();
 
 
         }

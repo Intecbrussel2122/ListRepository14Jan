@@ -40,7 +40,6 @@ namespace ListRepository.Models
             catch (Exception ex)
 
             {
-
                 throw ex;
             }
         }
@@ -129,7 +128,7 @@ namespace ListRepository.Models
             return list;
         }
 
-        public void ShowTelephones()
+        public void ShowComputers()
         {
             Console.WriteLine("List of Computers in the stock");
             Console.WriteLine();
