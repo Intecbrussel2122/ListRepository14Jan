@@ -18,5 +18,9 @@ namespace ListRepository.Models
             Category = category;
             Meassure = meassure;
         }
+        public override string ToString()
+        {
+            return $"{Id,-10} {Name,-15} {Category,-15} {Price,20} {Meassure, 20}";
+        }
     }
 }

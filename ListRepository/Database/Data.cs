@@ -14,11 +14,11 @@ namespace ListRepository.Database
         static Data()
         {
             ProductList = new List<ProductBase>();
-            ProductBase p1 = new ProductBase(1, "Asus", 800.00m, "Laptop");
-            ProductBase p2 = new ProductBase(2, "ThinkPad", 850.00m, "Laptop");
-            ProductBase p3 = new ProductBase(3, "HP", 500.00m, "Desktop");
-            ProductBase p4 = new ProductBase(4, "Daewoo", 450.00m, "Desktop");
-            ProductBase p5 = new ProductBase(5, "Lenovo", 950.00m, "Laptop");
+            Computer p1 = new Computer(1, "Asus", 800.00m, "Laptop");
+            Computer p2 = new Computer(2, "ThinkPad", 850.00m, "Laptop");
+            Computer p3 = new Computer(3, "HP", 500.00m, "Desktop");
+            Computer p4 = new Computer(4, "Daewoo", 450.00m, "Desktop");
+            Computer p5 = new Computer(5, "Lenovo", 950.00m, "Laptop");
 
             ProductList.Add(p1);
             ProductList.Add(p2);

@@ -11,13 +11,14 @@ namespace ListRepository
     {
         static void Main(string[] args)
         {
+            //Hello from ListDoneRightInClass 
             // Get All records from the database/collection
             ComputerManager cm = new ComputerManager();
             var resultAll = cm.SelectAll();
             Show(resultAll, "All data from the database");
 
             //Add new record to the database/collection
-            ProductBase p0 = new ProductBase(12, "IBM", 900.00m, "Laptop");
+            ProductBase p0 = new Computer(12, "IBM", 900.00m, "Laptop", "Package");
             cm.Insert(p0);
 
             if (resultAll == null)
@@ -96,6 +97,7 @@ namespace ListRepository
             foreach (var item in resultAll)
             {
                 Console.WriteLine(item);
+                //Console.WriteLine(item + "  " + ((Computer)item).Meassure);
             }
             Console.WriteLine();
         }
