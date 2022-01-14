@@ -19,12 +19,18 @@ namespace ListRepository.Database
             Computer p3 = new Computer(3, "HP ", 500.00m, "Desktop");
             Computer p4 = new Computer(4, "Daewoo", 450.00m, "Desktop");
             Computer p5 = new Computer(5, "Lenovo", 950.00m, "Laptop");
+            Telephone p6 = new Telephone(6, "iPhone", 700.00m, "SmartPhone");
+            Telephone p7 = new Telephone(7, "Galaxy", 380.00m, "SmartPhone");
+            Telephone p8 = new Telephone(8, "Nokia", 34.00m, "PocketPhone");
 
             ProductList.Add(p1);
             ProductList.Add(p2);
             ProductList.Add(p3);
             ProductList.Add(p4);
             ProductList.Add(p5);
+            ProductList.Add(p6);
+            ProductList.Add(p7);
+            ProductList.Add(p8);
         }
     }
 }

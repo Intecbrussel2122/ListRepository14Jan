@@ -128,5 +128,24 @@ namespace ListRepository.Models
             }
             return list;
         }
+
+        public void ShowTelephones()
+        {
+            Console.WriteLine("List of Computers in the stock");
+            Console.WriteLine();
+
+            foreach (var item in SelectAll().OfType<Computer>())
+            {
+                Console.WriteLine(item);
+            }
+
+            //foreach (var item in SelectAll())
+            //{
+            //    if (item is Computer)
+            //    {
+            //        Console.WriteLine(item);
+            //    }
+            //}
+        }
     }
 }

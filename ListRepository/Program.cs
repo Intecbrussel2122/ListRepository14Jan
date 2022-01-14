@@ -19,6 +19,9 @@ namespace ListRepository
             Show(resultAll, "All data from the database");
 
             //Add new record to the database/collection
+            ProductBase pt = new Telephone(10,"GooglePhone",550.00m,"Google Phone-1");
+            cm.Insert(pt);
+
             ProductBase p0 = new Computer(12, "IBM", 900.00m, "Laptop", "Package");
             cm.Insert(p0);
 
@@ -98,6 +101,9 @@ namespace ListRepository
                 Console.WriteLine(item);
             }
 
+            Console.WriteLine();
+            Console.WriteLine();
+            cm.ShowTelephones();
 
 
         }

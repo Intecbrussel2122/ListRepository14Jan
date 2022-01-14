@@ -51,6 +51,7 @@
     <Compile Include="Models\ProductBase.cs" />
     <Compile Include="Models\ProductBasteDTO.cs" />
     <Compile Include="Models\SortByName.cs" />
+    <Compile Include="Models\Telephone.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
