@@ -83,6 +83,11 @@ namespace ListRepository
             Show(sort, "Sorted by name list");
 
 
+            var stringResult = cm.GetPartOfProductAsString(3);
+            foreach (var item in stringResult)
+            {
+                Console.WriteLine(item);
+            }
 
 
 
@@ -95,7 +100,6 @@ namespace ListRepository
         {
             Console.WriteLine(argument);
             Console.WriteLine(new string('_',50));
-            Console.WriteLine("From ListDoneRightInClass");
             foreach (var item in resultAll)
             {
                 Console.WriteLine(item);

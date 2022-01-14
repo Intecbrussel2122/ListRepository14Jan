@@ -12,12 +12,12 @@ namespace ListRepository.Models
     {
         public void Delete(int id)
         {
-            Data.ProductList.RemoveAt(id-1);
+            Data.ProductList.RemoveAt(id - 1);
         }
 
         public bool Find(int find)
         {
-            var result = Data.ProductList.Find(f => f.Id == find );
+            var result = Data.ProductList.Find(f => f.Id == find);
             if (result != null)
             {
                 return true;
@@ -34,7 +34,7 @@ namespace ListRepository.Models
         {
             try
             {
-                ProductBase productToReturn = Data.ProductList[id-1];
+                ProductBase productToReturn = Data.ProductList[id - 1];
                 return productToReturn;
             }
             catch (Exception ex)
@@ -57,7 +57,7 @@ namespace ListRepository.Models
             updateProduct.Name = product.Name;
             updateProduct.Price = product.Price;
             updateProduct.Category = product.Category;
-            updateProduct.DateUpdated = DateTime.Now;   
+            updateProduct.DateUpdated = DateTime.Now;
         }
 
         public List<ProductBase> GetAllByCategory(string category)
@@ -87,5 +87,25 @@ namespace ListRepository.Models
             return result.FindAll(f => f.Category == category);
             #endregion
         }
+
+        public List<string> GetPartOfProductAsString(int subLength)
+        {
+            var result = SelectAll();
+            var list = new List<string>();
+            string name = string.Empty;
+            string category = string.Empty;
+
+            for (int i = 0; i < result.Count; i++)
+            {
+                name = result[i].Name.Substring(0, subLength).ToUpper();
+              
+                category = result[i].Category.Substring(0, subLength).ToUpper();
+
+                list.Add(result[i].Id.ToString()+ name+ category + "\t\t" + result[i].Price.ToString());
+            }
+            return list;
+        }
+
+
     }
 }
