@@ -80,13 +80,6 @@ namespace ListRepository
             sort.Sort(new SortByName());
             Show(sort, "Sorted by name list");
 
-
-
-
-
-
-
-
         }
 
         public static void Show(List<ProductBase> resultAll, string argument )
