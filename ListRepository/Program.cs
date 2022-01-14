@@ -115,7 +115,11 @@ namespace ListRepository
             foreach (var item in resultAll)
             {
                 Console.WriteLine(item);
-                //Console.WriteLine(item + "  " + ((Computer)item).Meassure);
+                if (item is Computer)
+                {
+                    Console.WriteLine(item + "  " + ((Computer)item).Meassure);
+
+                }
             }
             Console.WriteLine();
         }
