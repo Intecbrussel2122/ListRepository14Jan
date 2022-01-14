@@ -12,6 +12,7 @@ namespace ListRepository
         static void Main(string[] args)
         {
             //Hello from ListDoneRightInClass 
+
             // Get All records from the database/collection
             ComputerManager cm = new ComputerManager();
             var resultAll = cm.SelectAll();
