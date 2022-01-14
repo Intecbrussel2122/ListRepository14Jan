@@ -95,6 +95,7 @@ namespace ListRepository
         {
             Console.WriteLine(argument);
             Console.WriteLine(new string('_',50));
+            Console.WriteLine("From ListDoneRightInClass");
             foreach (var item in resultAll)
             {
                 Console.WriteLine(item);
