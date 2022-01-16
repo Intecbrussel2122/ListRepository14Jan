@@ -19,10 +19,10 @@ namespace ListRepository
             Show(resultAll, "All data from the database");
 
             //Add new record to the database/collection
-            Telephone pt = new Telephone(10,"GooglePhone",550.00m,"Google Phone-1");
+            ProductBase pt = new Telephone(10,"GooglePhone",550.00m,"Google Phone-1");
             cm.Insert(pt);
 
-            Computer p0 = new Computer(12, "IBM", 900.00m, "Laptop", "Package");
+            ProductBase p0 = new Computer(12, "IBM", 900.00m, "Laptop", "Package");
             cm.Insert(p0);
 
             if (resultAll == null)
@@ -66,8 +66,8 @@ namespace ListRepository
 
 
             // Add record if id and name are same
-            ProductBase p1 = new ProductBase(3, "HP1", 600.00m, "Laptop");
-            ProductBase p2 = new ProductBase(3, "HP1", 600.00m, "Laptop");
+            Computer p1 = new Computer(3, "HP1", 600.00m, "Laptop");
+            Computer p2 = new Computer(3, "HP1", 600.00m, "Laptop");
             Console.WriteLine("Test with ==");
             Console.WriteLine(p1==p2);
 
@@ -114,11 +114,15 @@ namespace ListRepository
             Console.WriteLine(new string('_',50));
             foreach (var item in resultAll)
             {
-                Console.WriteLine(item);
+               
                 if (item is Computer)
                 {
-                    Console.WriteLine(item + "  " + ((Computer)item).Meassure);
-
+                    //Console.WriteLine(item + "  " + ((Computer)item).Meassure);
+                    Console.WriteLine(item);
+                }
+                else
+                {
+                    Console.WriteLine(item);
                 }
             }
             Console.WriteLine();
