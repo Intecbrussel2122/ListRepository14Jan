@@ -13,6 +13,11 @@ namespace ListRepository
         {
             //Hello from ListDoneRightInClass 
 
+            //List<ProductBase> resultAll = cm.SelectAll();
+            //IEnumerable<ProductBase> resultAll = cm.SelectAll();
+            //IList<ProductBase> resultAll = cm.SelectAll();
+            //ICollection<ProductBase> resultAll = cm.SelectAll();
+
             // Get All records from the database/collection
             ComputerManager cm = new ComputerManager();
             var resultAll = cm.SelectAll();
