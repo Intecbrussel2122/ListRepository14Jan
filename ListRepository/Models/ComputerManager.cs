@@ -3,8 +3,6 @@ using ListRepository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ListRepository.Models
 {
@@ -92,13 +90,13 @@ namespace ListRepository.Models
             var result = SelectAll();
             var list = new List<string>();
             string name = string.Empty;
-            string category = string.Empty;
+            string category = string.Empty;   
 
             for (int i = 0; i < result.Count; i++)
             {
-                name = result[i].Name.Substring(0, subLength).ToUpper();
+                name = result[i].Name.PadRight(subLength).Substring(0, subLength).ToUpper();
               
-                category = result[i].Category.Substring(0, subLength).ToUpper();
+                category = result[i].Category.PadRight(subLength).Substring(0, subLength).ToUpper();
 
                 list.Add(result[i].Id.ToString()+ name+ category + "\t\t" + result[i].Price.ToString());
             }

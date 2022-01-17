@@ -34,12 +34,12 @@ namespace ListRepository.Models
 
         public override bool Equals(object obj)
         {
-            var product = obj as ProductBase;
+            var product = obj as Computer;
             if (product == null) // test if product is null
             {
                 return false;
             }
-            if (!(product is ProductBase))
+            if (!(product is Computer))
             {
                 return false;
             }

@@ -15,14 +15,18 @@ namespace ListRepository
 
             // Get All records from the database/collection
             ComputerManager cm = new ComputerManager();
-            var resultAll = cm.SelectAll();
+            //var resultAll = cm.SelectAll();
+            //List<ProductBase> resultAll = cm.SelectAll();
+            //IList<ProductBase> resultAll = cm.SelectAll();
+            //ICollection<ProductBase> resultAll = cm.SelectAll();
+            IEnumerable<ProductBase> resultAll = cm.SelectAll();
             Show(resultAll, "All data from the database");
 
             //Add new record to the database/collection
-            ProductBase pt = new Telephone(10,"GooglePhone",550.00m,"Google Phone-1");
+            Telephone pt = new Telephone(10,"GooglePhone",550.00m,"Google Phone-1");
             cm.Insert(pt);
 
-            ProductBase p0 = new Computer(12, "IBM", 900.00m, "Laptop", "Package");
+            Computer p0 = new Computer(12, "IBM", 900.00m, "Laptop", "Package");
             cm.Insert(p0);
 
             if (resultAll == null)
@@ -66,8 +70,8 @@ namespace ListRepository
 
 
             // Add record if id and name are same
-            ProductBase p1 = new ProductBase(3, "HP1", 600.00m, "Laptop");
-            ProductBase p2 = new ProductBase(3, "HP1", 600.00m, "Laptop");
+            Computer p1 = new Computer(3, "HP1", 600.00m, "Laptop");
+            Computer p2 = new Computer(3, "HP1", 600.00m, "Laptop");
             Console.WriteLine("Test with ==");
             Console.WriteLine(p1==p2);
 
@@ -108,20 +112,27 @@ namespace ListRepository
 
         }
 
-        public static void Show(List<ProductBase> resultAll, string argument )
+        //IEnumarable = for read only collections, it's forward only collection
+        public static void Show(IEnumerable<ProductBase> resultAll, string argument )
         {
+            
             Console.WriteLine(argument);
             Console.WriteLine(new string('_',50));
+           
             foreach (var item in resultAll)
             {
-                Console.WriteLine(item);
                 if (item is Computer)
                 {
-                    Console.WriteLine(item + "  " + ((Computer)item).Meassure);
-
+                    //Console.WriteLine(item + "  " + ((Computer)item).Meassure);
+                    Console.WriteLine(item);
+                }
+                else
+                {
+                    Console.WriteLine(item);
                 }
             }
             Console.WriteLine();
+            //Console.WriteLine(resultAll.Count);
         }
 
         
