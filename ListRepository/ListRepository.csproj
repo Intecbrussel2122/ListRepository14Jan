@@ -53,6 +53,7 @@
     <Compile Include="Models\SortByName.cs" />
     <Compile Include="Models\Telephone.cs" />
     <Compile Include="Models\TelephoneManager.cs" />
+    <Compile Include="Models\TV.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
