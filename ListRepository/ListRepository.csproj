@@ -48,6 +48,7 @@
     <Compile Include="Models\CommonBase.cs" />
     <Compile Include="Models\Computer.cs" />
     <Compile Include="Models\ComputerManager.cs" />
+    <Compile Include="Models\Helper.cs" />
     <Compile Include="Models\ProductBase.cs" />
     <Compile Include="Models\ProductBasteDTO.cs" />
     <Compile Include="Models\SortByName.cs" />

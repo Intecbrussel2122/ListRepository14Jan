@@ -17,6 +17,7 @@ namespace ListRepository.Models
             Price = price;
             Category = category;
         }
+       
 
         public void Delete(int id)
         {
@@ -38,10 +39,7 @@ namespace ListRepository.Models
             Data.ProductList.Add(product);
         }
 
-        public List<ProductBase> SelectAll()
-        {
-            return Data.ProductList;
-        }
+        
 
         public ProductBase SelectSingle(int id)
         {
@@ -83,12 +81,12 @@ namespace ListRepository.Models
             Console.WriteLine("List of Tv's in the stock");
             Console.WriteLine();
 
-            foreach (var item in SelectAll().OfType<TV>())
+            foreach (var item in Data.ProductList.OfType<TV>())
             {
                 Console.WriteLine(item);
             }
 
-            foreach (var item in SelectAll())
+            foreach (var item in Data.ProductList)
             {
                 if (item is TV && item.Name == "Sony")
                 {

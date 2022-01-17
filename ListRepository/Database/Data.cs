@@ -22,6 +22,7 @@ namespace ListRepository.Database
             Telephone p6 = new Telephone(6, "iPhone", 700.00m, "SmartPhone");
             Telephone p7 = new Telephone(7, "Galaxy", 380.00m, "SmartPhone");
             Telephone p8 = new Telephone(8, "Nokia", 34.00m, "PocketPhone");
+            TV p9 = new TV(9, "Sony", 680.00m, "HD 4k");
 
             ProductList.Add(p1);
             ProductList.Add(p2);
@@ -31,6 +32,7 @@ namespace ListRepository.Database
             ProductList.Add(p6);
             ProductList.Add(p7);
             ProductList.Add(p8);
+            ProductList.Add(p9);
         }
     }
 }
