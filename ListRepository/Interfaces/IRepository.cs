@@ -9,7 +9,6 @@ namespace ListRepository.Interfaces
 {
     public interface IRepository
     {
-        List<ProductBase> SelectAll();
         void Insert(ProductBase product);
         void Update(ProductBase product);
         void Delete(int id);

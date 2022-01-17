@@ -17,8 +17,8 @@ namespace ListRepository.Models
             Price = price;
             Category = category;
         }
-       
 
+       
         public void Delete(int id)
         {
             Data.ProductList.RemoveAt(id - 1);
@@ -38,9 +38,6 @@ namespace ListRepository.Models
         {
             Data.ProductList.Add(product);
         }
-
-        
-
         public ProductBase SelectSingle(int id)
         {
             try

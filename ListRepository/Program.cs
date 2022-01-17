@@ -12,15 +12,17 @@ namespace ListRepository
         static void Main(string[] args)
         {
             // Get All records from the database/collection
-            //TV tv = new TV(1,"Sony", 680.00m,"HD 4k");
-            TV tv = new TV();
-            IEnumerable<ProductBase> resultAll = tv.SelectAll();
+           
+            Helper helper = new Helper();
+            IEnumerable<ProductBase> resultAll = helper.SelectAll();
             Show(resultAll, "All data from the database");
 
-            TV tv2 = new TV(19, "Sony", 680.00m, "HD 4k");
+            TV tv2 = new TV(19, "Panasonic", 800.00m, "HD 4k");
             tv2.Insert(tv2);
             Show(resultAll, "All data after insert");
 
+            TV tv3 = new TV();
+            
 
         }
 
