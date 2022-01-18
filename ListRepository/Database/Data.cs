@@ -19,7 +19,7 @@ namespace ListRepository.Database
             Computer p3 = new Computer(3, "HP ", 500.00m, "Desktop");
             Computer p4 = new Computer(4, "Daewoo", 450.00m, "Desktop");
             Computer p5 = new Computer(5, "Lenovo", 950.00m, "Laptop");
-            Telephone p6 = new Telephone(6, "iPhone", 700.00m, "SmartPhone");
+            Telephone p6 = new Telephone(6, "iPhone", 2700.00m, "SmartPhone");
             Telephone p7 = new Telephone(7, "Galaxy", 380.00m, "SmartPhone");
             Telephone p8 = new Telephone(8, "Nokia", 34.00m, "PocketPhone");
             TV p9 = new TV(9, "Sony", 680.00m, "HD 4k");
