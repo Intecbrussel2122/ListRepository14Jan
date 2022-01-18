@@ -9,6 +9,7 @@ namespace ListRepository.Models
 {
     public class Helper
     {
+        // hello kenan
         ComputerManager manager = new ComputerManager();
         //TelephoneManager manager = new TelephoneManager();
         public void AddProduct(ProductBase product)
