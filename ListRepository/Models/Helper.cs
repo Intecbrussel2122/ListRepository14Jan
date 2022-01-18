@@ -9,9 +9,9 @@ namespace ListRepository.Models
 {
     public class Helper
     {
-       //ComputerManager manager = new ComputerManager();
-       TelephoneManager manager = new TelephoneManager();
-       public void AddProduct(ProductBase product)
+        ComputerManager manager = new ComputerManager();
+        //TelephoneManager manager = new TelephoneManager();
+        public void AddProduct(ProductBase product)
        {
             manager.Insert(product);
        }
