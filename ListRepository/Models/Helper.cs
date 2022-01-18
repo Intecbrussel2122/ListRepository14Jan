@@ -13,13 +13,18 @@ namespace ListRepository.Models
        TelephoneManager manager = new TelephoneManager();
        public void AddProduct(ProductBase product)
        {
-            manager.Insert(product)
+            manager.Insert(product);
        }
        
         public void SortByName()
         {
           var getAll =  manager.SelectAll();
           getAll.Sort();
+        }
+
+        public List<ProductBase> SelectAll()
+        {
+            return manager.SelectAll();
         }
     }
 }

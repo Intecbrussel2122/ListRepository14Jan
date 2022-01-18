@@ -16,14 +16,6 @@ namespace ListRepository
             Helper helper = new Helper();
             IEnumerable<ProductBase> resultAll = helper.SelectAll();
             Show(resultAll, "All data from the database");
-
-            TV tv2 = new TV(19, "Panasonic", 800.00m, "HD 4k");
-            tv2.Insert(tv2);
-            Show(resultAll, "All data after insert");
-
-            TV tv3 = new TV();
-            
-
         }
 
         //IEnumarable = for read only collections, it's forward only collection
@@ -37,7 +29,6 @@ namespace ListRepository
             {
                     Console.WriteLine(item);
             }
-            //Console.WriteLine(resultAll.Count);
         }
 
         
