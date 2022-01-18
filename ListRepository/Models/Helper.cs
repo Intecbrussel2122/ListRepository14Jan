@@ -9,9 +9,17 @@ namespace ListRepository.Models
 {
     public class Helper
     {
-        public List<ProductBase> SelectAll()
+       //ComputerManager manager = new ComputerManager();
+       TelephoneManager manager = new TelephoneManager();
+       public void AddProduct(ProductBase product)
+       {
+            manager.Insert(product)
+       }
+       
+        public void SortByName()
         {
-            return Data.ProductList;
+          var getAll =  manager.SelectAll();
+          getAll.Sort();
         }
     }
 }
